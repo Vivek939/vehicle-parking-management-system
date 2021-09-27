@@ -230,7 +230,7 @@ int generatingprice(struct vehicle*v,int h1,int m1,int t,int type)
        
            printf("Amount to be paid = %d",(nh*20)+(nm*20/60));
            //printf("%d",v->pc);
-           printf("\n Your current parking cash after Departure is %d \n",v->pc-(nh*20)+(nm*20/60));
+           printf("\n Your current parking cash after Departure is %d \n",v->pc-((nh*20)+(nm*20/60)));
            v->pc=v->pc-(nh*20)+(nm*20/60);
            if(v->pc<=0)
            {
@@ -242,7 +242,7 @@ int generatingprice(struct vehicle*v,int h1,int m1,int t,int type)
        else if(type==BIKE)
        {
            printf("Amount to be paid = %d",(nh*10)+(nm*10/60));
-           printf("\n Your current parking cash after Departure is %d \n",v->pc-(nh*10)+(nm*10/60));
+           printf("\n Your current parking cash after Departure is %d \n",v->pc-((nh*10)+(nm*10/60)));
            v->pc=v->pc-(nh*10)+(nm*10/60);
            if(v->pc<=0)
            {
@@ -252,7 +252,7 @@ int generatingprice(struct vehicle*v,int h1,int m1,int t,int type)
        }
        else{
            printf("Amount to be paid = %d",(nh*30)+(nm*30/60));
-           printf("\n Your current parking cash after Departure is %d \n",v->pc-(nh*30)+(nm*30/60));
+           printf("\n Your current parking cash after Departure is %d \n",v->pc-((nh*30)+(nm*30/60)));
            v->pc=v->pc-(nh*30)+(nm*30/60);
            if(v->pc<=0)
            {
